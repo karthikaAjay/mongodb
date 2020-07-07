@@ -1,0 +1,702 @@
+> use students
+switched to db students
+> db.studentData.find().pretty()
+{
+        "_id" : ObjectId("5ecc8b6c63316898262db2dc"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "contact" : "9999999999",
+        "courseCount" : 4,
+        "isVerified" : true
+}
+{
+        "_id" : ObjectId("5ecc9a1e63316898262db2dd"),
+        "name" : "Marry",
+        "email" : "marry@gmail.com"
+}
+{ "_id" : "123ABC-W", "name" : "harry", "email" : "harry@gmail.com" }
+> db.studentData.deleteOne({email:"Marry@gmail.com"})
+{ "acknowledged" : true, "deletedCount" : 0 }
+> db.studentData.updateOne({courseCount: 4}, {fbloggedIn:"yes"})
+2020-05-25T22:17:41.146-0700 E  QUERY    [js] uncaught exception: Error: the update operation document must contain atomic operators :
+DBCollection.prototype.updateOne@src/mongo/shell/crud_api.js:565:19
+@(shell):1:1
+> db.studentData.updateOne({courseCount: 4}, {$set: {fbloggedIn:"yes"}})## updation using set
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.studentData.find().pretty()
+{
+        "_id" : ObjectId("5ecc8b6c63316898262db2dc"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "contact" : "9999999999",
+        "courseCount" : 4,
+        "isVerified" : true,
+        "fbloggedIn" : "yes"
+}
+{
+        "_id" : ObjectId("5ecc9a1e63316898262db2dd"),
+        "name" : "Marry",
+        "email" : "marry@gmail.com"
+}
+{ "_id" : "123ABC-W", "name" : "harry", "email" : "harry@gmail.com" }
+> db.studentData.updateOne({courseCount: 4}, {$set: {fbloggedIn:"yes"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.studentData.find().pretty()
+{
+        "_id" : ObjectId("5ecc8b6c63316898262db2dc"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "contact" : "9999999999",
+        "courseCount" : 4,
+        "isVerified" : true,
+        "fbloggedIn" : "yes"
+}
+{
+        "_id" : ObjectId("5ecc9a1e63316898262db2dd"),
+        "name" : "Marry",
+        "email" : "marry@gmail.com"
+}
+{ "_id" : "123ABC-W", "name" : "harry", "email" : "harry@gmail.com" }
+> db.studentData.updateOne({_id: "123ABC-W"},{$set: {fbloggedIn:"yes"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.studentData.find().pretty()
+{
+        "_id" : ObjectId("5ecc8b6c63316898262db2dc"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "contact" : "9999999999",
+        "courseCount" : 4,
+        "isVerified" : true,
+        "fbloggedIn" : "yes"
+}
+{
+        "_id" : ObjectId("5ecc9a1e63316898262db2dd"),
+        "name" : "Marry",
+        "email" : "marry@gmail.com"
+}
+{
+        "_id" : "123ABC-W",
+        "name" : "harry",
+        "email" : "harry@gmail.com",
+        "fbloggedIn" : "yes"
+}
+> db.studentData.deleteOne({email:"marry@gmail.com"})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.studentData.updateOne({_id: "123ABC-W"},{$set: {fbloggedIn:"yes"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 0 }
+> db.studentData.find().pretty()
+{
+        "_id" : ObjectId("5ecc8b6c63316898262db2dc"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "contact" : "9999999999",
+        "courseCount" : 4,
+        "isVerified" : true,
+        "fbloggedIn" : "yes"
+}
+{
+        "_id" : "123ABC-W",
+        "name" : "harry",
+        "email" : "harry@gmail.com",
+        "fbloggedIn" : "yes"
+}
+
+> db.studentData.deleteMany({})
+{ "acknowledged" : true, "deletedCount" : 0 }
+> db.studentData.find()
+> db.studentData.insertMany([
+... {
+... "name": "Hitesh",
+... "email": "hitesh@hiteshchoudhary.com",
+... "contact": "9999999999",
+... "courseCount": 4,
+... "isVerified": true
+... },
+... {
+... "name": "Mark",
+... "email": "mark@example.com",
+... "contact": "9999999888",
+... "courseCount": 2,
+... "isVerified": false
+... }
+... ])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("5eccac00b072d9a97781892f"),
+                ObjectId("5eccac00b072d9a977818930")
+        ]
+}
+> db.studentData.find().pretty()
+{
+        "_id" : ObjectId("5eccac00b072d9a97781892f"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "contact" : "9999999999",
+        "courseCount" : 4,
+        "isVerified" : true
+}
+{
+        "_id" : ObjectId("5eccac00b072d9a977818930"),
+        "name" : "Mark",
+        "email" : "mark@example.com",
+        "contact" : "9999999888",
+        "courseCount" : 2,
+        "isVerified" : false
+}
+> db.studentData.find({courseCount: {$gt:1}})
+{ "_id" : ObjectId("5eccac00b072d9a97781892f"), "name" : "Hitesh", "email" : "hitesh@hiteshchoudhary.com", "contact" : "9999999999", "courseCount" : 4, "isVerified" : true }
+{ "_id" : ObjectId("5eccac00b072d9a977818930"), "name" : "Mark", "email" : "mark@example.com", "contact" : "9999999888", "courseCount" : 2, "isVerified" : false }
+> db.studentData.find({courseCount: {$gt:1}}).pretty()##findOne do not use pretty() and findOne choses first data of collection studentData
+{
+        "_id" : ObjectId("5eccac00b072d9a97781892f"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "contact" : "9999999999",
+        "courseCount" : 4,
+        "isVerified" : true
+}
+{
+        "_id" : ObjectId("5eccac00b072d9a977818930"),
+        "name" : "Mark",
+        "email" : "mark@example.com",
+        "contact" : "9999999888",
+        "courseCount" : 2,
+        "isVerified" : false
+}
+>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

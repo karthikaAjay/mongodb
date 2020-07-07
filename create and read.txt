@@ -1,0 +1,97 @@
+##data in BSON format not JSON
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use students
+switched to db students
+> show dbs
+admin   0.000GB
+config  0.000GB   ## eventhough we use use students and then show dbs we cannot find student database after data is added only we can see student database
+local   0.000GB
+> db.studentData.insertOne({  ## just one data
+... "name": "Hitesh",
+... "email": "hitesh@hiteshchoudhary.com",
+... "contact": "9999999999",
+... "courseCount": 4,
+... "isVerified": true
+... })
+{
+        "acknowledged" : true,    ## above data is acknowledged
+        "insertedId" : ObjectId("5ecc8b6c63316898262db2dc")  ## object-id
+}
+> db.studentData.find()## read data
+{ "_id" : ObjectId("5ecc8b6c63316898262db2dc"), "name" : "Hitesh", "email" : "hitesh@hiteshchoudhary.com", "contact" : "9999999999", "courseCount" : 4, "isVerified" : true }
+> db.studentData.find().pretty() ## to get in standard format
+{
+        "_id" : ObjectId("5ecc8b6c63316898262db2dc"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "contact" : "9999999999",
+        "courseCount" : 4,
+        "isVerified" : true
+}
+> db.studentData.insertOne({name : "Marry", email : "marry@gmail.com"})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("5ecc9a1e63316898262db2dd")
+}
+}
+> db.studentData.find().pretty()
+{
+        "_id" : ObjectId("5ecc8b6c63316898262db2dc"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "contact" : "9999999999",
+        "courseCount" : 4,
+        "isVerified" : true
+}
+{
+        "_id" : ObjectId("5ecc9a1e63316898262db2dd"),
+        "name" : "Marry",
+        "email" : "marry@gmail.com"
+}
+> db.studentData.insertOne({name : "harry", email : "harry@gmail.com", _id : "123ABC-W"})## GIVING ID IN THIS WAY NOT RECOMMENDED
+{ "acknowledged" : true, "insertedId" : "123ABC-W" }
+> db.studentData.find().pretty()
+{
+        "_id" : ObjectId("5ecc8b6c63316898262db2dc"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "contact" : "9999999999",
+        "courseCount" : 4,
+        "isVerified" : true
+}
+{
+        "_id" : ObjectId("5ecc9a1e63316898262db2dd"),
+        "name" : "Marry",
+        "email" : "marry@gmail.com"
+}
+{ "_id" : "123ABC-W", "name" : "harry", "email" : "harry@gmail.com" }
+> db.studentData.insertOne({name : "harry1", email : "harry1@gmail.com", _id : "123ABC-W"})## SAME ID AS ABOVE NOT ACCEPTED
+2020-05-25T21:43:14.905-0700 E  QUERY    [js] WriteError({
+        "index" : 0,
+        "code" : 11000,
+        "errmsg" : "E11000 duplicate key error collection: students.studentData index: _id_ dup key: { _id: \"123ABC-W\" }",
+        "op" : {
+                "name" : "harry1",
+                "email" : "harry1@gmail.com",
+                "_id" : "123ABC-W"
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 11000,
+        "errmsg" : "E11000 duplicate key error collection: students.studentData index: _id_ dup key: { _id: \"123ABC-W\" }",
+        "op" : {
+                "name" : "harry1",
+                "email" : "harry1@gmail.com",
+                "_id" : "123ABC-W"
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:458:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:855:49
+executeBatch@src/mongo/shell/bulk_api.js:919:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1163:21
+DBCollection.prototype.insertOne@src/mongo/shell/crud_api.js:264:9
+@(shell):1:1

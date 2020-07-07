@@ -1,0 +1,132 @@
+### one  comment to many replies (here reply =2) 
+> use comments
+switched to db comments
+> show dbs
+admin        0.000GB
+config       0.000GB
+courses      0.000GB
+local        0.000GB
+oldStudents  0.000GB
+students     0.000GB
+youtube      0.000GB
+> db.comment.insert({
+... videoname: "react.js",
+... comment: "How to install reactjs",
+... replies:["rep112","rep223"]
+... })
+> db.comment.insertOne({ videoname: "react.js", comment: "How to install reactjs", replies:["rep112","rep223"] })
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("5ed61ae44977eefe6a613278")
+}
+> db.comment.findOne()
+{
+        "_id" : ObjectId("5ed61ad74977eefe6a613277"),
+        "videoname" : "react.js",
+        "comment" : "How to install reactjs",
+        "replies" : [
+                "rep112",
+                "rep223"
+        ]
+}
+> db.replies.insertMany([
+... {
+... _id: "rep112",
+... text: "You can use node"
+... },
+... {
+... _id: "rep223",
+... text: "You can use homebrew"
+... }])
+{ "acknowledged" : true, "insertedIds" : [ "rep112", "rep223" ] }
+> db.replies.findOne()
+{ "_id" : "rep112", "text" : "You can use node" }
+> db.comment.deleteMany({})
+>db.comment.findOne()
+null
+> db.comment.insertOne({ videoname: "react.js", comment: "How to install reactjs", replies:[{_id:"rep112", text:"stuff 1"},{_id:"rep223", text:"stuff 2"}] })
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("5ed61d984977eefe6a61327a")
+}
+> db.comment.findOne()
+{
+        "_id" : ObjectId("5ed61cdc4977eefe6a613279"),
+        "videoname" : "react.js",
+        "comment" : "How to install reactjs",
+        "replies" : [
+                "rep112",
+                "rep223"
+        ]
+}
+> db.comment.find()
+{ "_id" : ObjectId("5ed61cdc4977eefe6a613279"), "videoname" : "react.js", "comment" : "How to install reactjs", "replies" : [ "rep112", "rep223" ] }
+{ "_id" : ObjectId("5ed61d984977eefe6a61327a"), "videoname" : "react.js", "comment" : "How to install reactjs", "replies" : [ { "_id" : "rep112", "text" : "stuff 1" }, { "_id" : "rep223", "text" : "stuff 2" } ] }
+> db.comment.deleteMany({})
+{ "acknowledged" : true, "deletedCount" : 2 }
+> db.comment.findOne()
+null
+> db.comment.insertOne({ videoname: "react.js", comment: "How to install reactjs", replies:[{_id:"rep112", text:"stuff 1"},{_id:"rep223", text:"stuff 2"}] })
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("5ed61f204977eefe6a61327b")
+}
+> db.comment.findOne()
+{
+        "_id" : ObjectId("5ed61f204977eefe6a61327b"),
+        "videoname" : "react.js",
+        "comment" : "How to install reactjs",
+        "replies" : [
+                {
+                        "_id" : "rep112",
+                        "text" : "stuff 1"
+                },
+                {
+                        "_id" : "rep223",
+                        "text" : "stuff 2"
+                }
+        ]
+}
+>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

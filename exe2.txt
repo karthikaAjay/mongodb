@@ -1,0 +1,1468 @@
+>use students
+switched to db students
+> db.studentData.insertMany([
+...   {
+...     "name": "Hitesh",
+...     "email": "hitesh@hiteshchoudhary.com",
+...     "courseCount": 4
+...   },
+...   {
+...     "name": "Mark",
+...     "email": "mark@example.com",
+...     "courseCount": 2
+...   },
+...   {
+...     "name": "Tom",
+...     "email": "tom@example.com",
+...     "courseCount": 5
+...   },
+...   {
+...     "name": "Jerry",
+...     "email": "jerry@example.com",
+...     "courseCount": 3
+...   },
+...   {
+...     "name": "spider",
+...     "email": "spider@example.com",
+...     "courseCount": 2
+...   },
+...   {
+...     "name": "super",
+...     "email": "super@example.com",
+...     "courseCount": 3
+...   },
+...   {
+...     "name": "Jade",
+...     "email": "jade@example.com",
+...     "courseCount": 2
+...   },
+...   {
+...     "name": "Theodore",
+...     "email": "theodore@example.com",
+...     "courseCount": 2
+...   },
+...   {
+...     "name": "Kirk",
+...     "email": "kirk@example.com",
+...     "courseCount": 9
+...   },
+...   {
+...     "name": "Fleming",
+...     "email": "fleming@example.com",
+...     "courseCount": 12
+...   },
+...   {
+...     "name": "Roberta",
+...     "email": "roberta@example.com",
+...     "courseCount": 5
+...   },
+...   {
+...     "name": "Lawrence",
+...     "email": "lawrence@example.com",
+...     "courseCount": 8
+...   },
+...   {
+...     "name": "Terry",
+...     "email": "trry@example.com",
+...     "courseCount": 13
+...   },
+...   {
+...     "name": "Rhodes",
+...     "email": "rhodes@example.com",
+...     "courseCount": 14
+...   },
+...   {
+...     "name": "Sullivan",
+...     "email": "sullivan@example.com",
+...     "courseCount": 17
+...   },
+...   {
+...     "name": "Robert",
+...     "email": "robert@example.com",
+...     "courseCount": 13
+...   },
+...   {
+...     "name": "Gordon",
+...     "email": "gordon@example.com",
+...     "courseCount": 18
+...   },
+...   {
+...     "name": "Henry",
+...     "email": "henry@example.com",
+...     "courseCount": 2
+...   },
+...   {
+...     "name": "May",
+...     "email": "may@example.com",
+...     "courseCount": 5
+...   },
+...   {
+...     "name": "Clark",
+...     "email": "clark@example.com",
+...     "courseCount": 19
+...   },
+...   {
+...     "name": "Katrina",
+...     "email": "katrina@example.com",
+...     "courseCount": 13
+...   },
+...   {
+...     "name": "Mayers",
+...     "email": "mayers@example.com",
+...     "courseCount": 11
+...   },
+...   {
+...     "name": "Tina",
+...     "email": "tina@example.com",
+...     "courseCount": 14
+...   },
+...   {
+...     "name": "Mason",
+...     "email": "mason@example.com",
+...     "courseCount": 4
+...   },
+...   {
+...     "name": "Alexis",
+...     "email": "alexis@example.com",
+...     "courseCount": 13
+...   },
+...   {
+...     "name": "Ford",
+...     "email": "ford@example.com",
+...     "courseCount": 9
+...   }
+... ]
+... )
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("5eccb9d363e45a8eb513a4da"),
+                ObjectId("5eccb9d363e45a8eb513a4db"),
+                ObjectId("5eccb9d363e45a8eb513a4dc"),
+                ObjectId("5eccb9d363e45a8eb513a4dd"),
+                ObjectId("5eccb9d363e45a8eb513a4de"),
+                ObjectId("5eccb9d363e45a8eb513a4df"),
+                ObjectId("5eccb9d363e45a8eb513a4e0"),
+                ObjectId("5eccb9d363e45a8eb513a4e1"),
+                ObjectId("5eccb9d363e45a8eb513a4e2"),
+                ObjectId("5eccb9d363e45a8eb513a4e3"),
+ > db.studentData.find().pretty()
+{
+        "_id" : ObjectId("5eccac00b072d9a97781892f"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "contact" : "9999999999",
+        "courseCount" : 4,
+        "isVerified" : true
+}
+{
+        "_id" : ObjectId("5eccac00b072d9a977818930"),
+        "name" : "Mark",
+        "email" : "mark@example.com",
+        "contact" : "9999999888",
+        "courseCount" : 2,
+        "isVerified" : false
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9bc"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "courseCount" : 4
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9bd"),
+        "name" : "Mark",
+        "email" : "mark@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9be"),
+        "name" : "Tom",
+        "email" : "tom@example.com",
+        "courseCount" : 5
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9bf"),
+        "name" : "Jerry",
+        "email" : "jerry@example.com",
+        "courseCount" : 3
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c0"),
+        "name" : "spider",
+        "email" : "spider@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c1"),
+        "name" : "super",
+        "email" : "super@example.com",
+        "courseCount" : 3
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c2"),
+        "name" : "Jade",
+        "email" : "jade@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c3"),
+        "name" : "Theodore",
+        "email" : "theodore@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c4"),
+        "name" : "Kirk",
+        "email" : "kirk@example.com",
+        "courseCount" : 9
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c5"),
+        "name" : "Fleming",
+        "email" : "fleming@example.com",
+        "courseCount" : 12
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c6"),
+        "name" : "Roberta",
+        "email" : "roberta@example.com",
+        "courseCount" : 5
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c7"),
+        "name" : "Lawrence",
+        "email" : "lawrence@example.com",
+        "courseCount" : 8
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c8"),
+        "name" : "Terry",
+        "email" : "trry@example.com",
+        "courseCount" : 13
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c9"),
+        "name" : "Rhodes",
+        "email" : "rhodes@example.com",
+        "courseCount" : 14
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9ca"),
+        "name" : "Sullivan",
+        "email" : "sullivan@example.com",
+        "courseCount" : 17
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9cb"),
+        "name" : "Robert",
+        "email" : "robert@example.com",
+        "courseCount" : 13
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9cc"),
+        "name" : "Gordon",
+        "email" : "gordon@example.com",
+        "courseCount" : 18
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9cd"),
+        "name" : "Henry",
+        "email" : "henry@example.com",
+        "courseCount" : 2
+}
+Type "it" for more
+
+> db.studentData.find().forEach((stu) => {printjson(stu)}) ## it avoid Type "it" for more it loops through collections and use callback function
+{
+        "_id" : ObjectId("5eccac00b072d9a97781892f"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "contact" : "9999999999",
+        "courseCount" : 4,
+        "isVerified" : true
+}
+{
+        "_id" : ObjectId("5eccac00b072d9a977818930"),
+        "name" : "Mark",
+        "email" : "mark@example.com",
+        "contact" : "9999999888",
+        "courseCount" : 2,
+        "isVerified" : false
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9bc"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "courseCount" : 4
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9bd"),
+        "name" : "Mark",
+        "email" : "mark@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9be"),
+        "name" : "Tom",
+        "email" : "tom@example.com",
+        "courseCount" : 5
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9bf"),
+        "name" : "Jerry",
+        "email" : "jerry@example.com",
+        "courseCount" : 3
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c0"),
+        "name" : "spider",
+        "email" : "spider@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c1"),
+        "name" : "super",
+        "email" : "super@example.com",
+        "courseCount" : 3
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c2"),
+        "name" : "Jade",
+        "email" : "jade@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c3"),
+        "name" : "Theodore",
+        "email" : "theodore@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c4"),
+        "name" : "Kirk",
+        "email" : "kirk@example.com",
+        "courseCount" : 9
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c5"),
+        "name" : "Fleming",
+        "email" : "fleming@example.com",
+        "courseCount" : 12
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c6"),
+        "name" : "Roberta",
+        "email" : "roberta@example.com",
+        "courseCount" : 5
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c7"),
+        "name" : "Lawrence",
+        "email" : "lawrence@example.com",
+        "courseCount" : 8
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c8"),
+        "name" : "Terry",
+        "email" : "trry@example.com",
+        "courseCount" : 13
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c9"),
+        "name" : "Rhodes",
+        "email" : "rhodes@example.com",
+        "courseCount" : 14
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9ca"),
+        "name" : "Sullivan",
+        "email" : "sullivan@example.com",
+        "courseCount" : 17
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9cb"),
+        "name" : "Robert",
+        "email" : "robert@example.com",
+        "courseCount" : 13
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9cc"),
+        "name" : "Gordon",
+        "email" : "gordon@example.com",
+        "courseCount" : 18
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9cd"),
+        "name" : "Henry",
+        "email" : "henry@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9ce"),
+        "name" : "May",
+        "email" : "may@example.com",
+        "courseCount" : 5
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9cf"),
+        "name" : "Clark",
+        "email" : "clark@example.com",
+        "courseCount" : 19
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9d0"),
+        "name" : "Katrina",
+        "email" : "katrina@example.com",
+        "courseCount" : 13
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9d1"),
+        "name" : "Mayers",
+        "email" : "mayers@example.com",
+        "courseCount" : 11
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9d2"),
+        "name" : "Tina",
+        "email" : "tina@example.com",
+        "courseCount" : 14
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9d3"),
+        "name" : "Mason",
+        "email" : "mason@example.com",
+        "courseCount" : 4
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9d4"),
+        "name" : "Alexis",
+        "email" : "alexis@example.com",
+        "courseCount" : 13
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9d5"),
+        "name" : "Ford",
+        "email" : "ford@example.com",
+        "courseCount" : 9
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4da"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "courseCount" : 4
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4db"),
+        "name" : "Mark",
+        "email" : "mark@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4dc"),
+        "name" : "Tom",
+        "email" : "tom@example.com",
+        "courseCount" : 5
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4dd"),
+        "name" : "Jerry",
+        "email" : "jerry@example.com",
+        "courseCount" : 3
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4de"),
+        "name" : "spider",
+        "email" : "spider@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4df"),
+        "name" : "super",
+        "email" : "super@example.com",
+        "courseCount" : 3
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4e0"),
+        "name" : "Jade",
+        "email" : "jade@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4e1"),
+        "name" : "Theodore",
+        "email" : "theodore@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4e2"),
+        "name" : "Kirk",
+        "email" : "kirk@example.com",
+        "courseCount" : 9
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4e3"),
+        "name" : "Fleming",
+        "email" : "fleming@example.com",
+        "courseCount" : 12
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4e4"),
+        "name" : "Roberta",
+        "email" : "roberta@example.com",
+        "courseCount" : 5
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4e5"),
+        "name" : "Lawrence",
+        "email" : "lawrence@example.com",
+        "courseCount" : 8
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4e6"),
+        "name" : "Terry",
+        "email" : "trry@example.com",
+        "courseCount" : 13
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4e7"),
+        "name" : "Rhodes",
+        "email" : "rhodes@example.com",
+        "courseCount" : 14
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4e8"),
+        "name" : "Sullivan",
+        "email" : "sullivan@example.com",
+        "courseCount" : 17
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4e9"),
+        "name" : "Robert",
+        "email" : "robert@example.com",
+        "courseCount" : 13
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4ea"),
+        "name" : "Gordon",
+        "email" : "gordon@example.com",
+        "courseCount" : 18
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4eb"),
+        "name" : "Henry",
+        "email" : "henry@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4ec"),
+        "name" : "May",
+        "email" : "may@example.com",
+        "courseCount" : 5
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4ed"),
+        "name" : "Clark",
+        "email" : "clark@example.com",
+        "courseCount" : 19
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4ee"),
+        "name" : "Katrina",
+        "email" : "katrina@example.com",
+        "courseCount" : 13
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4ef"),
+        "name" : "Mayers",
+        "email" : "mayers@example.com",
+        "courseCount" : 11
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4f0"),
+        "name" : "Tina",
+        "email" : "tina@example.com",
+        "courseCount" : 14
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4f1"),
+        "name" : "Mason",
+        "email" : "mason@example.com",
+        "courseCount" : 4
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4f2"),
+        "name" : "Alexis",
+        "email" : "alexis@example.com",
+        "courseCount" : 13
+}
+{
+        "_id" : ObjectId("5eccb9d363e45a8eb513a4f3"),
+        "name" : "Ford",
+        "email" : "ford@example.com",
+        "courseCount" : 9
+}
+
+##how to save bandwidth portion
+> use students
+switched to db students
+> db.studentData.find()
+{ "_id" : ObjectId("5eccac00b072d9a97781892f"), "name" : "Hitesh", "email" : "hitesh@hiteshchoudhary.com", "contact" : "9999999999", "courseCount" : 4, "isVerified" : true }
+{ "_id" : ObjectId("5eccac00b072d9a977818930"), "name" : "Mark", "email" : "mark@example.com", "contact" : "9999999888", "courseCount" : 2, "isVerified" : false }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9bc"), "name" : "Hitesh", "email" : "hitesh@hiteshchoudhary.com", "courseCount" : 4 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9bd"), "name" : "Mark", "email" : "mark@example.com", "courseCount" : 2 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9be"), "name" : "Tom", "email" : "tom@example.com", "courseCount" : 5 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9bf"), "name" : "Jerry", "email" : "jerry@example.com", "courseCount" : 3 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c0"), "name" : "spider", "email" : "spider@example.com", "courseCount" : 2 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c1"), "name" : "super", "email" : "super@example.com", "courseCount" : 3 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c2"), "name" : "Jade", "email" : "jade@example.com", "courseCount" : 2 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c3"), "name" : "Theodore", "email" : "theodore@example.com", "courseCount" : 2 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c4"), "name" : "Kirk", "email" : "kirk@example.com", "courseCount" : 9 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c5"), "name" : "Fleming", "email" : "fleming@example.com", "courseCount" : 12 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c6"), "name" : "Roberta", "email" : "roberta@example.com", "courseCount" : 5 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c7"), "name" : "Lawrence", "email" : "lawrence@example.com", "courseCount" : 8 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c8"), "name" : "Terry", "email" : "trry@example.com", "courseCount" : 13 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c9"), "name" : "Rhodes", "email" : "rhodes@example.com", "courseCount" : 14 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9ca"), "name" : "Sullivan", "email" : "sullivan@example.com", "courseCount" : 17 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9cb"), "name" : "Robert", "email" : "robert@example.com", "courseCount" : 13 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9cc"), "name" : "Gordon", "email" : "gordon@example.com", "courseCount" : 18 }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9cd"), "name" : "Henry", "email" : "henry@example.com", "courseCount" : 2 }
+Type "it" for more
+> db.studentData.find().pretty()
+{
+        "_id" : ObjectId("5eccac00b072d9a97781892f"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "contact" : "9999999999",
+        "courseCount" : 4,
+        "isVerified" : true
+}
+{
+        "_id" : ObjectId("5eccac00b072d9a977818930"),
+        "name" : "Mark",
+        "email" : "mark@example.com",
+        "contact" : "9999999888",
+        "courseCount" : 2,
+        "isVerified" : false
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9bc"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "courseCount" : 4
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9bd"),
+        "name" : "Mark",
+        "email" : "mark@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9be"),
+        "name" : "Tom",
+        "email" : "tom@example.com",
+        "courseCount" : 5
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9bf"),
+        "name" : "Jerry",
+        "email" : "jerry@example.com",
+        "courseCount" : 3
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c0"),
+        "name" : "spider",
+        "email" : "spider@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c1"),
+        "name" : "super",
+        "email" : "super@example.com",
+        "courseCount" : 3
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c2"),
+        "name" : "Jade",
+        "email" : "jade@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c3"),
+        "name" : "Theodore",
+        "email" : "theodore@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c4"),
+        "name" : "Kirk",
+        "email" : "kirk@example.com",
+        "courseCount" : 9
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c5"),
+        "name" : "Fleming",
+        "email" : "fleming@example.com",
+        "courseCount" : 12
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c6"),
+        "name" : "Roberta",
+        "email" : "roberta@example.com",
+        "courseCount" : 5
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c7"),
+        "name" : "Lawrence",
+        "email" : "lawrence@example.com",
+        "courseCount" : 8
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c8"),
+        "name" : "Terry",
+        "email" : "trry@example.com",
+        "courseCount" : 13
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c9"),
+        "name" : "Rhodes",
+        "email" : "rhodes@example.com",
+        "courseCount" : 14
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9ca"),
+        "name" : "Sullivan",
+        "email" : "sullivan@example.com",
+        "courseCount" : 17
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9cb"),
+        "name" : "Robert",
+        "email" : "robert@example.com",
+        "courseCount" : 13
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9cc"),
+        "name" : "Gordon",
+        "email" : "gordon@example.com",
+        "courseCount" : 18
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9cd"),
+        "name" : "Henry",
+        "email" : "henry@example.com",
+        "courseCount" : 2
+}
+Type "it" for more
+> db.studentData.find().forEach( (student) => {student.email} )## need student email only
+> db.studentData.find().forEach( (student) => {printjson(student.email)} )## print
+"hitesh@hiteshchoudhary.com"
+"mark@example.com"
+"hitesh@hiteshchoudhary.com"
+"mark@example.com"
+"tom@example.com"
+"jerry@example.com"
+"spider@example.com"
+"super@example.com"
+"jade@example.com"
+"theodore@example.com"
+"kirk@example.com"
+"fleming@example.com"
+"roberta@example.com"
+"lawrence@example.com"
+"trry@example.com"
+"rhodes@example.com"
+"sullivan@example.com"
+"robert@example.com"
+"gordon@example.com"
+"henry@example.com"
+"may@example.com"
+"clark@example.com"
+"katrina@example.com"
+"mayers@example.com"
+"tina@example.com"
+"mason@example.com"
+"alexis@example.com"
+"ford@example.com"
+"hitesh@hiteshchoudhary.com"
+"mark@example.com"
+"tom@example.com"
+"jerry@example.com"
+"spider@example.com"
+"super@example.com"
+"jade@example.com"
+"theodore@example.com"
+"kirk@example.com"
+"fleming@example.com"
+"roberta@example.com"
+"lawrence@example.com"
+"trry@example.com"
+"rhodes@example.com"
+"sullivan@example.com"
+"robert@example.com"
+"gordon@example.com"
+"henry@example.com"
+"may@example.com"
+"clark@example.com"
+"katrina@example.com"
+"mayers@example.com"
+"tina@example.com"
+"mason@example.com"
+"alexis@example.com"
+"ford@example.com"
+> db.studentData.find({}, {email : 1}) ## email with flag = 1 shows object-id also
+{ "_id" : ObjectId("5eccac00b072d9a97781892f"), "email" : "hitesh@hiteshchoudhary.com" }
+{ "_id" : ObjectId("5eccac00b072d9a977818930"), "email" : "mark@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9bc"), "email" : "hitesh@hiteshchoudhary.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9bd"), "email" : "mark@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9be"), "email" : "tom@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9bf"), "email" : "jerry@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c0"), "email" : "spider@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c1"), "email" : "super@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c2"), "email" : "jade@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c3"), "email" : "theodore@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c4"), "email" : "kirk@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c5"), "email" : "fleming@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c6"), "email" : "roberta@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c7"), "email" : "lawrence@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c8"), "email" : "trry@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9c9"), "email" : "rhodes@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9ca"), "email" : "sullivan@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9cb"), "email" : "robert@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9cc"), "email" : "gordon@example.com" }
+{ "_id" : ObjectId("5eccb9038cfc2fd81f53e9cd"), "email" : "henry@example.com" }
+Type "it" for more
+> db.studentData.find({}, {email : 1, _id: 0, name:1})## id:0 avoid id
+{ "name" : "Hitesh", "email" : "hitesh@hiteshchoudhary.com" }
+{ "name" : "Mark", "email" : "mark@example.com" }
+{ "name" : "Hitesh", "email" : "hitesh@hiteshchoudhary.com" }
+{ "name" : "Mark", "email" : "mark@example.com" }
+{ "name" : "Tom", "email" : "tom@example.com" }
+{ "name" : "Jerry", "email" : "jerry@example.com" }
+{ "name" : "spider", "email" : "spider@example.com" }
+{ "name" : "super", "email" : "super@example.com" }
+{ "name" : "Jade", "email" : "jade@example.com" }
+{ "name" : "Theodore", "email" : "theodore@example.com" }
+{ "name" : "Kirk", "email" : "kirk@example.com" }
+{ "name" : "Fleming", "email" : "fleming@example.com" }
+{ "name" : "Roberta", "email" : "roberta@example.com" }
+{ "name" : "Lawrence", "email" : "lawrence@example.com" }
+{ "name" : "Terry", "email" : "trry@example.com" }
+{ "name" : "Rhodes", "email" : "rhodes@example.com" }
+{ "name" : "Sullivan", "email" : "sullivan@example.com" }
+{ "name" : "Robert", "email" : "robert@example.com" }
+{ "name" : "Gordon", "email" : "gordon@example.com" }
+{ "name" : "Henry", "email" : "henry@example.com" }
+Type "it" for more
+> db.studentData.find({}, {email : 1, _id: 0})
+{ "email" : "hitesh@hiteshchoudhary.com" }
+{ "email" : "mark@example.com" }
+{ "email" : "hitesh@hiteshchoudhary.com" }
+{ "email" : "mark@example.com" }
+{ "email" : "tom@example.com" }
+{ "email" : "jerry@example.com" }
+{ "email" : "spider@example.com" }
+{ "email" : "super@example.com" }
+{ "email" : "jade@example.com" }
+{ "email" : "theodore@example.com" }
+{ "email" : "kirk@example.com" }
+{ "email" : "fleming@example.com" }
+{ "email" : "roberta@example.com" }
+{ "email" : "lawrence@example.com" }
+{ "email" : "trry@example.com" }
+{ "email" : "rhodes@example.com" }
+{ "email" : "sullivan@example.com" }
+{ "email" : "robert@example.com" }
+{ "email" : "gordon@example.com" }
+{ "email" : "henry@example.com" }
+Type "it" for more
+> db.studentData.find({}, {email : 1, _id: 0}).toArray() ## in array format
+[
+        {
+                "email" : "hitesh@hiteshchoudhary.com"
+        },
+        {
+                "email" : "mark@example.com"
+        },
+        {
+                "email" : "hitesh@hiteshchoudhary.com"
+        },
+        {
+                "email" : "mark@example.com"
+        },
+        {
+                "email" : "tom@example.com"
+        },
+        {
+                "email" : "jerry@example.com"
+        },
+        {
+                "email" : "spider@example.com"
+        },
+        {
+                "email" : "super@example.com"
+        },
+        {
+                "email" : "jade@example.com"
+        },
+        {
+                "email" : "theodore@example.com"
+        },
+        {
+                "email" : "kirk@example.com"
+        },
+        {
+                "email" : "fleming@example.com"
+        },
+        {
+                "email" : "roberta@example.com"
+        },
+        {
+                "email" : "lawrence@example.com"
+        },
+        {
+                "email" : "trry@example.com"
+        },
+        {
+                "email" : "rhodes@example.com"
+        },
+        {
+                "email" : "sullivan@example.com"
+        },
+        {
+                "email" : "robert@example.com"
+        },
+        {
+                "email" : "gordon@example.com"
+        },
+        {
+                "email" : "henry@example.com"
+        },
+        {
+                "email" : "may@example.com"
+        },
+        {
+                "email" : "clark@example.com"
+        },
+        {
+                "email" : "katrina@example.com"
+        },
+        {
+                "email" : "mayers@example.com"
+        },
+        {
+                "email" : "tina@example.com"
+        },
+        {
+                "email" : "mason@example.com"
+        },
+        {
+                "email" : "alexis@example.com"
+        },
+        {
+                "email" : "ford@example.com"
+        },
+        {
+                "email" : "hitesh@hiteshchoudhary.com"
+        },
+        {
+                "email" : "mark@example.com"
+        },
+        {
+                "email" : "tom@example.com"
+        },
+        {
+                "email" : "jerry@example.com"
+        },
+        {
+                "email" : "spider@example.com"
+        },
+        {
+                "email" : "super@example.com"
+        },
+        {
+                "email" : "jade@example.com"
+        },
+        {
+                "email" : "theodore@example.com"
+        },
+        {
+                "email" : "kirk@example.com"
+        },
+        {
+                "email" : "fleming@example.com"
+        },
+        {
+                "email" : "roberta@example.com"
+        },
+        {
+                "email" : "lawrence@example.com"
+        },
+        {
+                "email" : "trry@example.com"
+        },
+        {
+                "email" : "rhodes@example.com"
+        },
+        {
+                "email" : "sullivan@example.com"
+        },
+        {
+                "email" : "robert@example.com"
+        },
+        {
+                "email" : "gordon@example.com"
+        },
+        {
+                "email" : "henry@example.com"
+        },
+        {
+                "email" : "may@example.com"
+        },
+        {
+                "email" : "clark@example.com"
+        },
+        {
+                "email" : "katrina@example.com"
+        },
+        {
+                "email" : "mayers@example.com"
+        },
+        {
+                "email" : "tina@example.com"
+        },
+        {
+                "email" : "mason@example.com"
+        },
+        {
+                "email" : "alexis@example.com"
+        },
+        {
+                "email" : "ford@example.com"
+        }
+]
+
+---
+> use students
+switched to db students
+> db.studentData.updateOne({name: "Hitesh"}, {$set: {lastlogin: ["Monday", "Tuesday", "Wednesday"]}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.studentData.find().pretty()
+{
+        "_id" : ObjectId("5eccac00b072d9a97781892f"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "contact" : "9999999999",
+        "courseCount" : 4,
+        "isVerified" : true,
+        "lastlogin" : [
+                "Monday",
+                "Tuesday",
+                "Wednesday"
+        ]
+}
+{
+        "_id" : ObjectId("5eccac00b072d9a977818930"),
+        "name" : "Mark",
+        "email" : "mark@example.com",
+        "contact" : "9999999888",
+        "courseCount" : 2,
+        "isVerified" : false
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9bc"),
+        "name" : "Hitesh",
+        "email" : "hitesh@hiteshchoudhary.com",
+        "courseCount" : 4
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9bd"),
+        "name" : "Mark",
+        "email" : "mark@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9be"),
+        "name" : "Tom",
+        "email" : "tom@example.com",
+        "courseCount" : 5
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9bf"),
+        "name" : "Jerry",
+        "email" : "jerry@example.com",
+        "courseCount" : 3
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c0"),
+        "name" : "spider",
+        "email" : "spider@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c1"),
+        "name" : "super",
+        "email" : "super@example.com",
+        "courseCount" : 3
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c2"),
+        "name" : "Jade",
+        "email" : "jade@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c3"),
+        "name" : "Theodore",
+        "email" : "theodore@example.com",
+        "courseCount" : 2
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c4"),
+        "name" : "Kirk",
+        "email" : "kirk@example.com",
+        "courseCount" : 9
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c5"),
+        "name" : "Fleming",
+        "email" : "fleming@example.com",
+        "courseCount" : 12
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c6"),
+        "name" : "Roberta",
+        "email" : "roberta@example.com",
+        "courseCount" : 5
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c7"),
+        "name" : "Lawrence",
+        "email" : "lawrence@example.com",
+        "courseCount" : 8
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c8"),
+        "name" : "Terry",
+        "email" : "trry@example.com",
+        "courseCount" : 13
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9c9"),
+        "name" : "Rhodes",
+        "email" : "rhodes@example.com",
+        "courseCount" : 14
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9ca"),
+        "name" : "Sullivan",
+        "email" : "sullivan@example.com",
+        "courseCount" : 17
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9cb"),
+        "name" : "Robert",
+        "email" : "robert@example.com",
+        "courseCount" : 13
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9cc"),
+        "name" : "Gordon",
+        "email" : "gordon@example.com",
+        "courseCount" : 18
+}
+{
+        "_id" : ObjectId("5eccb9038cfc2fd81f53e9cd"),
+        "name" : "Henry",
+        "email" : "henry@example.com",
+        "courseCount" : 2
+}
+Type "it" for more
+> db.studentData.findOne({name: "Hitesh"}).lastlogin
+[ "Monday", "Tuesday", "Wednesday" ]
+>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

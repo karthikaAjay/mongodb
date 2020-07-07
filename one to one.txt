@@ -1,0 +1,25 @@
+> db.persons.insertOne({
+... name : "karthi",
+... isVerified : true,
+... earning : 3000                                  ##here we link two documents with id
+... })
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("5ed4e7d845d9e56d89fb6505")
+}
+> db.videos.insertOne({
+... topic : "Fun One",
+... length : 4,
+... creator: ObjectId("5ed4e7d845d9e56d89fb6505")
+... })
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("5ed4e89b45d9e56d89fb6506")
+}
+> db.videos.findOne()
+{
+        "_id" : ObjectId("5ed4e89b45d9e56d89fb6506"),
+        "topic" : "Fun One",
+        "length" : 4,
+        "creator" : ObjectId("5ed4e7d845d9e56d89fb6505")
+}

@@ -1,0 +1,44 @@
+> use lco
+switched to db lco
+> db.courses.insertOne({
+... name: "react native",
+... price:12.0
+... })
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("5ed6219b9e410479b54fdc4e")
+}
+> db.users.insertOne({
+... name: "karthika",
+... isVerified: true
+... })
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("5ed621d29e410479b54fdc4f")
+}
+> db.purchase.insertOne({
+... productId:ObjectId("5ed6219b9e410479b54fdc4e"),
+... customerId:ObjectId("5ed621d29e410479b54fdc4f")
+... })
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("5ed622959e410479b54fdc50")
+}
+> db.purchase.drop()
+true
+> db.users.updateOne({}, {$set: {purchaselist: [{purchaseId: ObjectId("5ed6219b9e410479b54fdc4e") }]}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.users.findOne()
+{
+        "_id" : ObjectId("5ed621d29e410479b54fdc4f"),
+        "name" : "karthika",
+        "isVerified" : true,
+        "purchaselist" : [
+                {
+                        "purchaseId" : ObjectId("5ed6219b9e410479b54fdc4e")
+                }
+        ]
+}
+
+
+
